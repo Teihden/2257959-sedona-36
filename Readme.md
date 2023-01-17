@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Денис Тейхриб](https://up.htmlacademy.ru/htmlcss/36/user/2257959).
-* Наставник: `Неизвестно`.
+* Наставник: [Артём Картавый](https://htmlacademy.ru/profile/artem_k).
 
 ---
 
