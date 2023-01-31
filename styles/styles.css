@@ -87,8 +87,13 @@ body {
 .hero {
   color: #333333;
   background-color: rgba(131, 179, 211, 0.2);
-  background-image: url("../images/backgrounds/hero-banner.jpg");
+  background-image:
+    url("../images/backgrounds/divider.svg"),
+    url("../images/backgrounds/hero-banner.jpg");
   background-size: 100% auto;
+  background-position:
+    center bottom,
+    top left;
   background-repeat: no-repeat;
 }
 
