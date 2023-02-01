@@ -7,6 +7,7 @@
     <title>HTML Academy: Седона</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
@@ -17,7 +18,7 @@
         </a>
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-current" href="index.html">Главная</a>
+            <a class="navigation-link navigation-link-current">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">О Cедоне</a>
@@ -38,64 +39,62 @@
               <span class="link-favourite-counter">12</span>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link button-primary" href="#">Хочу сюда!</a>
-          </li>
         </ul>
+        <a class="navigation-button button-primary" href="#">Хочу сюда!</a>
       </nav>
     </header>
 
     <main class="index-main" data-test="main">
-      <section class="hero-banner" data-test="hero">
+      <section class="hero" data-test="hero">
         <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
-        <img class="hero-banner-image" src="images/logos/welcome-message.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona, because the Grand Canon sucks!">
+        <img class="hero-message" src="images/logos/welcome-message.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona, because the Grand Canon sucks!">
       </section>
 
       <section class="features" data-test="advantages">
         <h2 class="visually-hidden">Описание города и проживания в нем</h2>
-        <section class="features-city">
-          <h3 class="features-city-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h3>
-          <p class="features-city-text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
-          <ul class="features-city-list">
-            <li class="features-city-item">
-              <h4 class="features-city-item-title">Настоящий городок</h4>
-              <p class="features-city-item-text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-              <img class="features-city-item-image" src="images/features-content/city.jpg" width="800" height="384" alt="Вид на город Седона.">
+        <section class="city">
+          <h3 class="features-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h3>
+          <p class="features-text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+          <ul class="features-list">
+            <li class="features-item features-item-primary">
+              <h4 class="features-subtitle">Настоящий городок</h4>
+              <p class="features-desription">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+              <img class="features-image" src="images/features-content/city.jpg" width="800" height="384" alt="Вид на город Седона.">
             </li>
-            <li class="features-city-item">
-              <h4 class="features-city-item-title">Небольшая площадь</h4>
-              <p class="features-city-item-text">Все достопримечательности находятся очень близко</p>
+            <li class="features-item features-item-tertiary">
+              <h4 class="features-subtitle features-subtitle-primary">Небольшая площадь</h4>
+              <p class="features-desription">Все достопримечательности находятся очень близко</p>
             </li>
-            <li class="features-city-item">
-              <h4 class="features-city-item-title">Красивая дорога</h4>
-              <p class="features-city-item-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <li class="features-item features-item-secondary">
+              <h4 class="features-subtitle features-subtitle-primary">Красивая дорога</h4>
+              <p class="features-desription">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </li>
-            <li class="features-city-item">
-              <h4 class="features-city-item-title">Мало туристов</h4>
-              <p class="features-city-item-text">Большинство едет в Гранд Каньон и толпится там</p>
+            <li class="features-item features-item-tertiary">
+              <h4 class="features-subtitle features-subtitle-primary">Мало туристов</h4>
+              <p class="features-desription">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
-            <li class="features-city-item">
-              <h4 class="features-city-item-title">Там есть мост дьявола</h4>
-              <p class="features-city-item-text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-              <img class="features-city-item-image" src="images/features-content/devils-bridge.jpg" width="800" height="385" alt="Мост дьявола.">
+            <li class="features-item features-item-primary">
+              <h4 class="features-subtitle">Там есть мост дьявола</h4>
+              <p class="features-desription">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+              <img class="features-item-image" src="images/features-content/devils-bridge.jpg" width="800" height="385" alt="Мост дьявола.">
             </li>
           </ul>
         </section>
         <section class="features-staying">
-          <h3 class="features-staying-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h3>
-          <p class="features-staying-text">Опытный персонал и качественное обслуживание!</p>
-          <ul class="features-staying-list">
-            <li class="features-staying-item">
-              <h4 class="features-staying-item-title">Жильё</h4>
-              <p class="features-staying-item-text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+          <h3 class="features-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h3>
+          <p class="features-text">Опытный персонал и качественное обслуживание!</p>
+          <ul class="features-list">
+            <li class="features-item features-item-secondary">
+              <h4 class="features-subtitle features-subtitle-primary">Жильё</h4>
+              <p class="features-desription">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
             </li>
-            <li class="features-staying-item">
-              <h4 class="features-staying-item-title">Еда</h4>
-              <p class="features-staying-item-text">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+            <li class="features-item">
+              <h4 class="features-subtitle features-subtitle-primary">Еда</h4>
+              <p class="features-desription">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
             </li>
-            <li class="features-staying-item">
-              <h4 class="features-staying-item-title">Сувениры</h4>
-              <p class="features-staying-item-text">Не только китайского, но и настоящего местного производства!</p>
+            <li class="features-item features-item-secondary">
+              <h4 class="features-subtitle features-subtitle-primary">Сувениры</h4>
+              <p class="features-desription">Не только китайского, но и настоящего местного производства!</p>
             </li>
           </ul>
         </section>
