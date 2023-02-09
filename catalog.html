@@ -16,7 +16,7 @@
         <a class="navigation-logo" href="index.html">
           <img src="images/logos/city-of-sedona.svg" width="140" height="70" alt="Логотип города Седона.">
         </a>
-        <ul class="navigation-list">
+        <ul class="navigation-list navigation-pages">
           <li class="navigation-item">
             <a class="navigation-link" href="index.html">Главная</a>
           </li>
@@ -58,7 +58,7 @@
         </ol>
         <h2 class="visually-hidden">Фильтр для поиска вариантов для проживания</h2>
         <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset class="filter-group">
+          <fieldset class="filter-group filter-group-facilities">
             <legend class="filter-title">Инфраструктура:</legend>
             <ul class="filter-list">
               <li class="filter-item">
@@ -75,7 +75,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="filter-group">
+          <fieldset class="filter-group filter-group-accommodation">
             <legend class="filter-title">Тип жилья:</legend>
             <ul class="filter-list">
               <li class="filter-item">
@@ -92,23 +92,25 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="filter-group">
+          <fieldset class="filter-group filter-group-price">
             <legend class="filter-title">Стоимость, ₽:</legend>
 
             <!-- Слайдер с 2 ползунками. Уточнить параметры, реализацию, step, max и т.п. Пока не трогаем.-->
-            <!-- <span>от</span>
-            <output class="filter-output" for="range-min" name="outputmin">0</output>
+            <span>от</span>
+            <output class="filter-output" for="price-min" name="outputmin">0</output>
             <span>до</span>
-            <output class="filter-output" for="range-max" name="outputmax">9000</output>
-            <input class="filter-range" id="range-min" name="rangemin" type="range" min="0" max="12000" step="500" value="0">
-            <label class="visually-hidden" for="range-min">Минимальная стоимость</label>
-            <input class="filter-range" id="range-max" name="rangemax" type="range" min="0" max="12000" step="500" value="9000">
-            <label class="visually-hidden" for="range-min">Максимальная стоимость</label> -->
+            <output class="filter-output" for="price-max" name="outputmax">9000</output>
+            <input class="filter-price" id="price-min" name="pricemin" type="range" min="0" max="12000" step="500" value="0">
+            <label class="visually-hidden" for="price-min">Минимальная стоимость</label>
+            <input class="filter-price" id="price-max" name="pricemax" type="range" min="0" max="12000" step="500" value="9000">
+            <label class="visually-hidden" for="price-min">Максимальная стоимость</label>
             <!-- Слайдер с 2 ползунками -->
 
           </fieldset>
-          <button class="filter-button button-secondary" type="submit">Применить</button>
-          <button class="filter-button button-transparent" type="reset">Сбросить</button>
+          <div class="filter-buttons">
+            <button class="filter-button button-secondary" type="submit">Применить</button>
+            <button class="filter-button button-transparent" type="reset">Сбросить</button>
+          </div>
         </form>
       </section>
 
@@ -221,7 +223,7 @@
       </section>
     </main>
 
-    <section class="newsletter newsletter-basic" data-test="subscribe">
+    <section class="newsletter" data-test="subscribe">
       <h2 class="newsletter-title newsletter-title-primary">Подпишитесь на рассылку</h2>
       <p class="newsletter-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
       <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">

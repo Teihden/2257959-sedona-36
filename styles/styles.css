@@ -1,9 +1,9 @@
+/* Initial setups */
 @font-face {
   font-family: "PT Sans";
   font-weight: 400;
   font-display: swap;
   src: url("../fonts/ptsans-400.woff2") format("woff2");
-
 }
 
 @font-face {
@@ -13,51 +13,50 @@
   src: url("../fonts/ptsans-700.woff2") format("woff2");
 }
 
+html {
+  min-width: 1280px;
+  height: 100%;
+
+  background-color: #f2f2f2;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  min-height: 100%;
+  margin: 0 auto;
+
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
-  background-color: #f2f2f2;
-}
 
-.index-main,
-.catalog-main {
-  color: #333333;
   background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.button-primary,
-.button-secondary,
-.button-selected,
-.button-transparent {
-  font-family: inherit;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #ffffff;
+/* Page-header */
+.navigation {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
 }
 
-.button-primary {
-  background-color: #756157;
+.navigation-logo {
+  align-self: flex-start;
+  width: 140px;
+  margin-right: 28px;
 }
 
-.button-secondary {
-  background-color: #82b3d3;
+.navigation-pages {
+  width: 480px;
+  margin-right: auto;
 }
 
-.button-selected {
-  background-color: #7db54f;
-}
-
-.button-transparent {
-  background-color: transparent;
-}
-
-.page-header {
-  color: #000000;
-  background-color: #ffffff;
+.navigation-user {
+  width: 180px;
+  margin-right: 20px;
 }
 
 .navigation-link {
@@ -76,16 +75,21 @@ body {
   line-height: 10px;
   text-align: center;
   color: #ffffff;
+
   background-color: #7db54f;
 }
 
 .navigation-button {
+  align-self: center;
+
   font-size: 16px;
   line-height: 20px;
 }
 
+/* Hero section */
 .hero {
   color: #333333;
+
   background-color: rgba(131, 179, 211, 0.2);
   background-image:
     url("../images/backgrounds/divider.svg"),
@@ -97,6 +101,12 @@ body {
   background-repeat: no-repeat;
 }
 
+.hero-message {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Features section */
 .features-title {
   font-weight: 700;
   font-size: 30px;
@@ -113,18 +123,41 @@ body {
   color: #333333;
 }
 
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.features-item-compound {
+  display: flex;
+  width: 1200px;
+}
+
+.features-item {
+  width: 400px;
+
+  text-align: center;
+}
+
 .features-item-primary {
   color: #ffffff;
+
   background-color: #82b3d3;
 }
 
 .features-item-secondary {
   color: #333333;
+
   background-color: rgba(131, 179, 211, 0.2);
 }
 
 .features-item-tertiary {
   color: #333333;
+
   background-color: rgba(131, 179, 211, 0.12);
 }
 
@@ -132,18 +165,14 @@ body {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
-  text-align: center;
   text-transform: uppercase;
-}
-
-.features-desription {
-  text-align: center;
 }
 
 .features-subtitle-primary {
   color: #000000;
 }
 
+/* Search section */
 .search {
   text-align: center;
 }
@@ -166,17 +195,18 @@ body {
   line-height: 36px;
 }
 
+/* Newsletter section */
+.newsletter {
+  margin-bottom: auto;
+}
+
 .newsletter-background {
   color: #ffffff;
+
   background-color: rgba(131, 179, 211, 0.2);
   background-image: url("../images/backgrounds/newsletter.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
-}
-
-.newsletter-basic {
-  color: #333333;
-  background-color: #ffffff;
 }
 
 .newsletter-title {
@@ -202,6 +232,7 @@ body {
   font-size: 18px;
   line-height: 24px;
   color: rgba(0, 0, 0, 0.6);
+
   background-color: #f2f2f2;
 }
 
@@ -210,27 +241,12 @@ body {
   line-height: 36px;
 }
 
-.page-footer {
-  color: #333333;
-  background-color: #ffffff;
-}
-
-.footer-social-link {
-  color: inherit;
-  text-decoration: none;
-}
-
-.footer-phone {
-  font-size: 40px;
-  line-height: 40px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #000000;
-}
-
+/* Filter section */
 .filter {
+  padding: 0 70px;
+
   color: #ffffff;
+
   background-color: rgba(131, 179, 211, 0.2);
   background-image: url("../images/backgrounds/filter.jpg");
   background-size: cover;
@@ -246,20 +262,65 @@ body {
 .breadcrumbs-link {
   font-size: 16px;
   line-height: 21px;
-  color: #ffffff;
   text-decoration: none;
+  color: #ffffff;
+}
+
+.filter-form {
+  display: flex;
+}
+
+.filter-group {
+  padding: 0;
+  margin: 0;
+
+  border: 0;
+}
+
+.filter-group-facilities,
+.filter-group-accommodation {
+  width: 150px;
+}
+
+.filter-group-price {
+  width: 288px;
+}
+
+.filter-group-facilities,
+.filter-group-price {
+  margin-right: 70px;
+}
+
+.filter-group-accommodation {
+  margin-right: auto;
+}
+
+.filter-buttons {
+  width: 191px;
 }
 
 .filter-title {
+  padding: 0;
+
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   text-transform: capitalize;
 }
 
+.filter-list {
+  padding: 0;
+}
+
 .filter-button {
   font-size: 16px;
   line-height: 20px;
+}
+
+/* Catalog section */
+.catalog {
+  width: 1060px;
+  margin: 0 auto;
 }
 
 .catalog-title {
@@ -334,4 +395,79 @@ body {
   text-align: center;
   text-decoration: none;
   color: #000000;
+}
+
+.button-primary,
+.button-secondary,
+.button-selected,
+.button-transparent {
+  font-family: inherit;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Page-footer */
+.page-footer {
+  display: flex;
+  padding: 0 70px;
+}
+
+.footer-social-list {
+  width: 142px;
+}
+
+.footer-social-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-phone {
+  margin: 0 auto;
+
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.about-text {
+  width: 115px;
+}
+
+/* Buttons general styles */
+.button-primary {
+  background-color: #756157;
+}
+
+.button-secondary {
+  background-color: #82b3d3;
+}
+
+.button-selected {
+  background-color: #7db54f;
+}
+
+.button-transparent {
+  background-color: transparent;
+}
+
+/* Helper classes */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+
+  border: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
