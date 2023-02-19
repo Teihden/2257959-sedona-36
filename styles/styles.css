@@ -127,20 +127,36 @@ body {
   min-width: 44px;
 }
 
+.link-favourite {
+  position: relative;
+}
+
 .link-favourite-counter {
+  position: absolute;
+  top: 11px;
+  left: 20px;
+
+  width: 20px;
+  height: 20px;
+
   font-size: 10px;
-  line-height: 10px;
+  line-height: 20px;
   text-align: center;
   color: #ffffff;
 
   background-color: #7db54f;
+  border-radius: 50%;
 }
 
 .navigation-button {
-  align-self: center;
+  padding: 8px 0;
+  width: 160px;
+  margin: 14px 0 19px;
 
   font-size: 16px;
   line-height: 20px;
+
+  border-radius: 4px;
 }
 
 /* Hero section */
@@ -185,7 +201,7 @@ body {
 }
 
 .city-title {
-  max-width: 620px;
+  max-width: 630px;
   margin: 0 auto 25px;
 }
 
@@ -202,11 +218,13 @@ body {
 }
 
 .city-text {
-  margin: 0 0 90px;
+  max-width: 660px;
+  margin: 0 auto 90px;
 }
 
 .staying-text {
-  margin: 0 0 64px;
+  max-width: 500px;
+  margin: 0 auto 64px;
 }
 
 .features-list {
@@ -227,7 +245,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 85px;
+  padding: 0 84px;
   width: 400px;
   min-height: 385px;
 
@@ -261,7 +279,7 @@ body {
 }
 
 .features-subtitle {
-  max-width: 172px;
+  max-width: 175px;
 
   font-weight: 700;
   font-size: 24px;
@@ -296,6 +314,7 @@ body {
 
 /* Search section */
 .search {
+  padding: 0 304px;
   margin-bottom: 96px;
 
   text-align: center;
@@ -321,16 +340,18 @@ body {
 .search-button {
   display: block;
   max-width: 375px;
-  min-height: 52px;
+  padding: 8px 0;
   margin: 0 auto;
 
   font-size: 20px;
   line-height: 36px;
+
+  border-radius: 4px;
 }
 
 /* Newsletter section */
 .newsletter {
-  padding: 96px 0 104px;
+  padding: 96px 258px 104px;
   margin-bottom: auto;
 }
 
@@ -367,23 +388,39 @@ body {
 
 .newsletter-form {
   display: flex;
-  max-width: 452px;
-  min-height: 52px;
-  margin: 0 auto;
 }
 
 .newsletter-email {
+  flex-grow: 1;
+  padding: 14px 20px;
+
   font-family: inherit;
   font-size: 18px;
   line-height: 24px;
   color: rgba(0, 0, 0, 0.6);
 
   background-color: #f2f2f2;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+newsletter-email::placeholder {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+
+  opacity: 0.6;
 }
 
 .newsletter-button {
+  padding: 8px 0;
+  width: 232px;
+
   font-size: 20px;
   line-height: 36px;
+
+  border-radius: 0 4px 4px 0;
 }
 
 /* Filter section */
@@ -467,10 +504,6 @@ body {
   margin-right: auto;
 }
 
-.filter-buttons {
-  width: 191px;
-}
-
 .filter-title {
   padding: 0;
   margin: 0 0 32px;
@@ -515,6 +548,7 @@ body {
   align-items: stretch;
   justify-content: flex-end;
   gap: 32px;
+  width: 191px;
 }
 
 .filter-button {
@@ -522,6 +556,8 @@ body {
 
   font-size: 16px;
   line-height: 20px;
+
+  border-radius: 4px;
 }
 
 /* Catalog section */
@@ -547,12 +583,18 @@ body {
 }
 
 .catalog-select {
+  padding: 14px 20px;
   margin-right: 70px;
+  min-width: 292px;
 
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
+
+  background-color: transparent;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
 }
 
 .catalog-view-list {
@@ -570,13 +612,24 @@ body {
   height: 48px;
   padding: 0;
 
-  color: #333333;
   background-color: transparent;
+  border-radius: 4px;
 
   cursor: pointer;
 }
 
+.button-view-inactive {
+  border: 2px solid #E5E5E5;
+}
+
+.button-view-active {
+  border: 2px solid #000000;
+}
+
 .accommodation-list {
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  gap: 20px;
   padding: 0 0 40px 0;
   margin: 0 0 40px 0;
 
@@ -585,6 +638,9 @@ body {
 }
 
 .accommodation-item {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  gap: 16px 20px;
   width: 340px;
   padding: 20px;
 
@@ -593,11 +649,13 @@ body {
 }
 
 .accommodation-link {
+  grid-column: 1 / -1;
+  max-width: max-content;
+
   text-decoration: none;
 }
 
 .accommodation-title {
-  display: inline-block;
   margin: 0;
 
   font-weight: 700;
@@ -614,18 +672,32 @@ body {
   object-fit: contain;
 }
 
+.accommodation-rates {
+  text-align: right;
+}
+
+.accommodation-button {
+  padding: 8px 0;
+  width: 140px;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  border-radius: 4px;
+}
+
 .accommodation-rating {
+  padding: 8px 0;
+  width: 140px;
+
   font-size: 16px;
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
   color: #333333;
   background-color: #f2f2f2;
-}
 
-.accommodation-button {
-  font-size: 16px;
-  line-height: 20px;
+  border-radius: 4px;
 }
 
 .pagination {
@@ -677,23 +749,6 @@ body {
   color: #000000;
 }
 
-.button-primary,
-.button-secondary,
-.button-selected,
-.button-transparent {
-  font-family: inherit;
-  font-weight: 700;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #ffffff;
-
-  border-width: 0;
-
-  user-select: none;
-  cursor: pointer;
-}
-
 /* Page-footer */
 .page-footer {
   display: flex;
@@ -740,6 +795,23 @@ body {
 }
 
 /* Buttons general styles */
+.button-primary,
+.button-secondary,
+.button-selected,
+.button-transparent {
+  font-family: inherit;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+
+  border: none;
+
+  user-select: none;
+  cursor: pointer;
+}
+
 .button-primary {
   background-color: #756157;
 }
