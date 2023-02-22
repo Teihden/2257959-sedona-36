@@ -149,7 +149,8 @@ body {
 }
 
 .navigation-button {
-  padding: 8px 0;
+  align-self: center;
+  padding: 8px;
   width: 160px;
   margin: 14px 0 19px;
 
@@ -340,7 +341,7 @@ body {
 .search-button {
   display: block;
   max-width: 375px;
-  padding: 8px 0;
+  padding: 8px;
   margin: 0 auto;
 
   font-size: 20px;
@@ -414,7 +415,7 @@ newsletter-email::placeholder {
 }
 
 .newsletter-button {
-  padding: 8px 0;
+  padding: 8px;
   width: 232px;
 
   font-size: 20px;
@@ -552,7 +553,7 @@ newsletter-email::placeholder {
 }
 
 .filter-button {
-  padding: 8px 0;
+  padding: 8px;
 
   font-size: 16px;
   line-height: 20px;
@@ -677,7 +678,7 @@ newsletter-email::placeholder {
 }
 
 .accommodation-button {
-  padding: 8px 0;
+  padding: 8px;
   width: 140px;
 
   font-size: 16px;
@@ -687,7 +688,7 @@ newsletter-email::placeholder {
 }
 
 .accommodation-rating {
-  padding: 8px 0;
+  padding: 8px;
   width: 140px;
 
   font-size: 16px;
