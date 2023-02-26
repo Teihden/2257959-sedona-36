@@ -29,7 +29,7 @@
         </ul>
         <ul class="navigation-list navigation-user">
           <li class="navigation-item">
-            <a class="navigation-link link-search" href="#">
+            <a class="navigation-link link-search" href="#modal">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false">
                 <path d="m19.5 18-3.7-3.67c1-1.3 1.7-2.98 1.7-4.87a8 8 0 0 0-8-7.96c-4.4 0-8 3.68-8 8.06a8 8 0 0 0 12.9 6.26l3.7 3.68 1.4-1.5Zm-10-2.48a6 6 0 0 1-6-5.96 6 6 0 0 1 12 0 6 6 0 0 1-6 5.96Z" />
               </svg>
@@ -113,7 +113,7 @@
       <section class="search" data-test="search">
         <h2 class="search-title">Заинтересовались?</h2>
         <p class="search-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a class="search-button button-primary" href="#">Поиск гостиницы в Седоне</a>
+        <a class="search-button button-primary" href="#modal">Поиск гостиницы в Седоне</a>
       </section>
     </main>
 
@@ -122,7 +122,7 @@
       <p class="newsletter-text">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
       <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
         <label class="visually-hidden" for="newsletter-email">Email</label>
-        <input class="newsletter-email" id="newsletter-email" name="newsletter-email" placeholder="Ваш e-mail" type="email" required>
+        <input class="newsletter-email" id="newsletter-email" name="newsletter-email" type="email" placeholder="Ваш e-mail" required>
         <button class="newsletter-button button-secondary" type="submit">Подписаться</button>
       </form>
     </section>
@@ -163,6 +163,85 @@
         <span class="visually-hidden">HTML Academy</span>
       </a>
     </footer>
+
+    <div class="modal" id="modal" hidden>
+      <div class="modal-inner">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <button class="modal-button-close">
+          <svg width="20" height="20" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M17.5 4.78 16.2 3.5l-5.7 5.7-5.72-5.7L3.5 4.8l5.7 5.7-5.7 5.7 1.3 1.3 5.7-5.7 5.7 5.7 1.3-1.3-5.7-5.7 5.7-5.7Z" />
+          </svg>
+          <span class="visually-hidden">Закрыть окно</span>
+        </button>
+        <form class="modal-form" action="https://echo.htmlacademy.ru/" method="get">
+          <label class="modal-label modal-label-date" for="check-in">Дата заезда:</label>
+          <div class="modal-group modal-group-date">
+            <input class="modal-input modal-input-date" id="check-in" name="check-in" type="text" value="27 апреля 2020" placeholder="Укажите дату" required>
+            <button class="modal-button modal-button-date" type="button">
+              <svg class="modal-input-image" width="20" height="20" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M7.75 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Z" />
+                <path d="M17 4h-2V2h-1v2H6V2H5v2H3c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h14c.5 0 1-.5 1-1V5c0-.6-.5-1-1-1Zm0 12H3V9h14v7ZM3 8V5h2v2h1V5h8v2h1V5h2v3H3Z" />
+                <path d="M10 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM12.25 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM7.75 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM5.5 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM5.5 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM10 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM12.25 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM14.5 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM14.5 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z" />
+              </svg>
+              <span class="visually-hidden">Выбрать дату заезда</span>
+            </button>
+            <p class="modal-status modal-alert">Мы не можем отправить вас в прошлое.</p>
+          </div>
+          <label class="modal-label modal-label-date" for="check-out">Дата выезда:</label>
+          <div class="modal-group modal-group-date">
+            <input class="modal-input modal-input-date" id="check-out" name="check-out" type="text" value="1 сентября 2023" placeholder="Укажите дату" required>
+            <button class="modal-button modal-button-date" type="button">
+              <svg class="modal-input-image" width="20" height="20" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M7.75 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Z" />
+                <path d="M17 4h-2V2h-1v2H6V2H5v2H3c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h14c.5 0 1-.5 1-1V5c0-.6-.5-1-1-1Zm0 12H3V9h14v7ZM3 8V5h2v2h1V5h8v2h1V5h2v3H3Z" />
+                <path d="M10 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM12.25 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM7.75 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM5.5 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM5.5 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM10 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM12.25 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM14.5 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM14.5 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z" />
+              </svg>
+              <span class="visually-hidden">Выбрать дату выезда</span>
+            </button>
+            <p class="modal-status modal-info">На эти даты есть свободные номера. Пока есть.</p>
+          </div>
+          <label class="modal-label modal-label-guests" for="adults">Взрослые:</label>
+          <div class="modal-group">
+            <input class="modal-input modal-input-guests" id="adults" name="adults" type="number" value="2" placeholder="0" min="0" max="99" required>
+            <button class="modal-button modal-button-change modal-button-increase" type="button">
+              <svg class="modal-input-image" width="20" height="20" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M3 9v2h14V9H3Z" />
+              </svg>
+              <span class="visually-hidden">Уменьшить количество взрослых</span>
+            </button>
+            <button class="modal-button modal-button-change modal-button-decrease" type="button">
+              <svg class="modal-input-image" width="20" height="20" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" />
+              </svg>
+              <span class="visually-hidden">Увеличить количество взрослых</span>
+            </button>
+          </div>
+          <div class="modal-label-tooltip modal-label-guests">
+            <label class="modal-label" for="children">Дети:</label>
+            <span class="tooltip">
+              <button class="tooltip-button" type="button" aria-labelledby="tooltip-label"></button>
+              <span class="tooltip-text" id="tooltip-label" role="tooltip">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+            </span>
+          </div>
+          <div class="modal-group">
+            <input class="modal-input modal-input-guests" id="children" name="children" type="number" value="2" placeholder="0" min="0" max="99" required>
+            <button class="modal-button modal-button-change modal-button-increase" type="button">
+              <svg class="modal-input-image" width="20" height="20" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M3 9v2h14V9H3Z" />
+              </svg>
+              <span class="visually-hidden">Уменьшить количество детей</span>
+            </button>
+            <button class="modal-button modal-button-change modal-button-decrease" type="button">
+              <svg class="modal-input-image" width="20" height="20" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" />
+              </svg>
+              <span class="visually-hidden">Увеличить количество детей</span>
+            </button>
+          </div>
+          <button class="modal-button-submit" type="submit">Найти</button>
+        </form>
+      </div>
+    </div>
 
   </body>
 
