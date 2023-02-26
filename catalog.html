@@ -29,9 +29,9 @@
         </ul>
         <ul class="navigation-list navigation-user">
           <li class="navigation-item">
-            <a class="navigation-link link-search" href="#">
+            <a class="navigation-link link-search" href="#modal">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false">
-                <path d="m19.5 18-3.7-3.67c1-1.3 1.7-2.98 1.7-4.87a8 8 0 0 0-8-7.96c-4.4 0-8 3.68-8 8.06a8 8 0 0 0 12.9 6.26l3.7 3.68 1.4-1.5Zm-10-2.48a6 6 0 0 1-6-5.96 6 6 0 0 1 12 0 6 6 0 0 1-6 5.96Z"/>
+                <path d="m19.5 18-3.7-3.67c1-1.3 1.7-2.98 1.7-4.87a8 8 0 0 0-8-7.96c-4.4 0-8 3.68-8 8.06a8 8 0 0 0 12.9 6.26l3.7 3.68 1.4-1.5Zm-10-2.48a6 6 0 0 1-6-5.96 6 6 0 0 1 12 0 6 6 0 0 1-6 5.96Z" />
               </svg>
               <span class="visually-hidden">Поиск</span>
             </a>
@@ -39,7 +39,7 @@
           <li class="navigation-item">
             <a class="navigation-link link-favourite" href="#">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false">
-                <path d="M9.9 19a.9.9 0 0 1-.8-.4c-5.4-6.1-6.7-7.5-7-7.9A5.4 5.4 0 0 1 6.5 2C7.8 2 9 2.5 10 3.3a5.46 5.46 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z"/>
+                <path d="M9.9 19a.9.9 0 0 1-.8-.4c-5.4-6.1-6.7-7.5-7-7.9A5.4 5.4 0 0 1 6.5 2C7.8 2 9 2.5 10 3.3a5.46 5.46 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z" />
               </svg>
               <span class="visually-hidden">В избранном</span>
               <span class="link-favourite-counter">12</span>
@@ -68,16 +68,22 @@
             <legend class="filter-title">Инфраструктура:</legend>
             <ul class="filter-list">
               <li class="filter-item">
-                <input class="filter-input" id="pool" name="facilities" type="checkbox" value="pool" checked>
-                <label class="filter-label" for="pool">Бассейн</label>
+                <label class="filter-label">
+                  <input class="filter-input filter-input-facilities" id="pool" name="facilities" type="checkbox" value="pool" checked>
+                  <span class="filter-label-text">Бассейн</span>
+                </label>
               </li>
               <li class="filter-item">
-                <input class="filter-input" id="parking" name="facilities" type="checkbox" value="parking" checked>
-                <label class="filter-label" for="parking">Парковка</label>
+                <label class="filter-label">
+                  <input class="filter-input filter-input-facilities" id="parking" name="facilities" type="checkbox" value="parking" checked>
+                  <span class="filter-label-text">Парковка</span>
+                </label>
               </li>
               <li class="filter-item">
-                <input class="filter-input" id="wifi" name="facilities" type="checkbox" value="wifi">
-                <label class="filter-label" for="wifi">Wi-Fi</label>
+                <label class="filter-label">
+                  <input class="filter-input filter-input-facilities" id="wifi" name="facilities" type="checkbox" value="wifi">
+                  <span class="filter-label-text">Wi-Fi</span>
+                </label>
               </li>
             </ul>
           </fieldset>
@@ -85,33 +91,47 @@
             <legend class="filter-title">Тип жилья:</legend>
             <ul class="filter-list">
               <li class="filter-item">
-                <input class="filter-input" id="hotel" name="accomodation" type="radio" value="hotel" checked>
-                <label class="filter-label" for="hotel">Гостиница</label>
+                <label class="filter-label">
+                  <input class="filter-input filter-input-accomodation" id="hotel" name="accomodation" type="radio" value="hotel" checked>
+                  <span class="filter-label-text">Гостиница</span>
+                </label>
               </li>
               <li class="filter-item">
-                <input class="filter-input" id="motel" name="accomodation" type="radio" value="motel">
-                <label class="filter-label" for="motel">Мотель</label>
+                <label class="filter-label">
+                  <input class="filter-input filter-input-accomodation" id="motel" name="accomodation" type="radio" value="motel">
+                  <span class="filter-label-text">Мотель</span>
+                </label>
               </li>
               <li class="filter-item">
-                <input class="filter-input" id="apartment" name="accomodation" type="radio" value="apartment">
-                <label class="filter-label" for="apartment">Апартаменты</label>
+                <label class="filter-label">
+                  <input class="filter-input filter-input-accomodation" id="apartment" name="accomodation" type="radio" value="apartment">
+                  <span class="filter-label-text">Апартаменты</span>
+                </label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="filter-group filter-group-price">
             <legend class="filter-title">Стоимость, ₽:</legend>
-
-            <!-- Слайдер с 2 ползунками. Уточнить параметры, реализацию, step, max и т.п. Пока не трогаем.-->
-            <span>от</span>
-            <output class="filter-output" for="price-min" name="outputmin">0</output>
-            <span>до</span>
-            <output class="filter-output" for="price-max" name="outputmax">9000</output>
-            <input class="filter-price" id="price-min" name="pricemin" type="range" min="0" max="12000" step="500" value="0">
-            <label class="visually-hidden" for="price-min">Минимальная стоимость</label>
-            <input class="filter-price" id="price-max" name="pricemax" type="range" min="0" max="12000" step="500" value="9000">
-            <label class="visually-hidden" for="price-min">Максимальная стоимость</label>
-            <!-- Слайдер с 2 ползунками -->
-
+            <div class="filter-price-values">
+              <label class="filter-price-label">
+                <input class="filter-price-input price-input-min" id="price-min" name="price-min" type="number" value="0" placeholder="0" min="0" max="11000" required>
+                <span class="filter-price-text">от</span>
+              </label>
+              <label class="filter-price-label">
+                <input class="filter-price-input price-input-max" id="price-max" name="price-max" type="number" value="9000" placeholder="0" min="0" max="11000" required>
+                <span class="filter-price-text">до</span>
+              </label>
+            </div>
+            <div class="filter-price-range">
+              <div class="filter-price-bar" style="left: 0; right: 60px;">
+                <button class="range-button button-min" type="button">
+                  <span class="visually-hidden">Минимальная стоимость</span>
+                </button>
+                <button class="range-button button-max" type="button">
+                  <span class="visually-hidden">Максимальная стоимость</span>
+                </button>
+              </div>
+            </div>
           </fieldset>
           <div class="filter-buttons">
             <button class="filter-button button-secondary" type="submit">Применить</button>
@@ -151,10 +171,10 @@
         </div>
         <ul class="accomodation-list">
           <li class="accomodation-item">
-            <a class="accomodation-link" href="#">
+            <a class="accomodation-link accomodation-link-image" href="#">
               <img class="accomodation-image" src="images/catalog-content/catalog-1.jpg" width="300" height="212" alt="Скалы и звездное небо.">
             </a>
-            <a class="accomodation-link" href="#">
+            <a class="accomodation-link accomodation-link-title" href="#">
               <h3 class="accomodation-title">Amara Resort &amp; Spa</h3>
             </a>
             <span class="accomodation-type">Гостиница</span>
@@ -167,10 +187,10 @@
             <span class="accomodation-rating">Рейтинг: 8,5</span>
           </li>
           <li class="accomodation-item">
-            <a class="accomodation-link" href="#">
+            <a class="accomodation-link accomodation-link-image" href="#">
               <img class="accomodation-image" src="images/catalog-content/catalog-2.jpg" width="300" height="212" alt="Скалы, пасмурное небо, радуга после дождя.">
             </a>
-            <a class="accomodation-link" href="#">
+            <a class="accomodation-link accomodation-link-title" href="#">
               <h3 class="accomodation-title">Villas at Poco Diablo</h3>
             </a>
             <span class="accomodation-type">Гостиница</span>
@@ -183,10 +203,10 @@
             <span class="accomodation-rating">Рейтинг: 9,2</span>
           </li>
           <li class="accomodation-item">
-            <a class="accomodation-link" href="#">
+            <a class="accomodation-link accomodation-link-image" href="#">
               <img class="accomodation-image" src="images/catalog-content/catalog-3.jpg" width="300" height="212" alt="Пустыня и горы.">
             </a>
-            <a class="accomodation-link" href="#">
+            <a class="accomodation-link accomodation-link-title" href="#">
               <h3 class="accomodation-title">Desert Quail Inn</h3>
             </a>
             <span class="accomodation-type">Гостиница</span>
@@ -199,10 +219,10 @@
             <span class="accomodation-rating">Рейтинг: 6,9</span>
           </li>
           <li class="accomodation-item">
-            <a class="accomodation-link" href="#">
+            <a class="accomodation-link accomodation-link-image" href="#">
               <img class="accomodation-image" src="images/catalog-content/catalog-4.jpg" width="300" height="212" alt="Скалы в пустыне на фоне звездного неба.">
             </a>
-            <a class="accomodation-link" href="#">
+            <a class="accomodation-link accomodation-link-title" href="#">
               <h3 class="accomodation-title">GreenTree Inn</h3>
             </a>
             <span class="accomodation-type">Гостиница</span>
@@ -243,7 +263,7 @@
       <p class="newsletter-text">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
       <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
         <label class="visually-hidden" for="newsletter-email">Email</label>
-        <input class="newsletter-email" id="newsletter-email" name="newsletter-email" placeholder="Ваш e-mail" type="email" required>
+        <input class="newsletter-email" id="newsletter-email" name="newsletter-email" type="email" placeholder="Ваш e-mail" required>
         <button class="newsletter-button button-secondary" type="submit">Подписаться</button>
       </form>
     </section>
@@ -284,6 +304,85 @@
         <span class="visually-hidden">HTML Academy</span>
       </a>
     </footer>
+
+    <div class="modal" id="modal" hidden>
+      <div class="modal-inner">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <button class="modal-button-close">
+          <svg width="20" height="20" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M17.5 4.78 16.2 3.5l-5.7 5.7-5.72-5.7L3.5 4.8l5.7 5.7-5.7 5.7 1.3 1.3 5.7-5.7 5.7 5.7 1.3-1.3-5.7-5.7 5.7-5.7Z" />
+          </svg>
+          <span class="visually-hidden">Закрыть окно</span>
+        </button>
+        <form class="modal-form" action="https://echo.htmlacademy.ru/" method="get">
+          <label class="modal-label modal-label-date" for="check-in">Дата заезда:</label>
+          <div class="modal-group modal-group-date">
+            <input class="modal-input modal-input-date" id="check-in" name="check-in" type="text" value="27 апреля 2020" placeholder="Укажите дату" required>
+            <button class="modal-button modal-button-date" type="button">
+              <svg class="modal-input-image" width="20" height="20" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M7.75 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Z" />
+                <path d="M17 4h-2V2h-1v2H6V2H5v2H3c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h14c.5 0 1-.5 1-1V5c0-.6-.5-1-1-1Zm0 12H3V9h14v7ZM3 8V5h2v2h1V5h8v2h1V5h2v3H3Z" />
+                <path d="M10 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM12.25 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM7.75 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM5.5 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM5.5 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM10 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM12.25 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM14.5 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM14.5 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z" />
+              </svg>
+              <span class="visually-hidden">Выбрать дату заезда</span>
+            </button>
+            <p class="modal-status modal-alert">Мы не можем отправить вас в прошлое.</p>
+          </div>
+          <label class="modal-label modal-label-date" for="check-out">Дата выезда:</label>
+          <div class="modal-group modal-group-date">
+            <input class="modal-input modal-input-date" id="check-out" name="check-out" type="text" value="1 сентября 2023" placeholder="Укажите дату" required>
+            <button class="modal-button modal-button-date" type="button">
+              <svg class="modal-input-image" width="20" height="20" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M7.75 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5Z" />
+                <path d="M17 4h-2V2h-1v2H6V2H5v2H3c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h14c.5 0 1-.5 1-1V5c0-.6-.5-1-1-1Zm0 12H3V9h14v7ZM3 8V5h2v2h1V5h8v2h1V5h2v3H3Z" />
+                <path d="M10 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM12.25 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM7.75 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM5.5 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM5.5 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM10 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM12.25 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM14.5 12c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM14.5 13c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z" />
+              </svg>
+              <span class="visually-hidden">Выбрать дату выезда</span>
+            </button>
+            <p class="modal-status modal-info">На эти даты есть свободные номера. Пока есть.</p>
+          </div>
+          <label class="modal-label modal-label-guests" for="adults">Взрослые:</label>
+          <div class="modal-group">
+            <input class="modal-input modal-input-guests" id="adults" name="adults" type="number" value="2" placeholder="0" min="0" max="99" required>
+            <button class="modal-button modal-button-change modal-button-increase" type="button">
+              <svg class="modal-input-image" width="20" height="20" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M3 9v2h14V9H3Z" />
+              </svg>
+              <span class="visually-hidden">Уменьшить количество взрослых</span>
+            </button>
+            <button class="modal-button modal-button-change modal-button-decrease" type="button">
+              <svg class="modal-input-image" width="20" height="20" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" />
+              </svg>
+              <span class="visually-hidden">Увеличить количество взрослых</span>
+            </button>
+          </div>
+          <div class="modal-label-tooltip modal-label-guests">
+            <label class="modal-label" for="children">Дети:</label>
+            <span class="tooltip">
+              <button class="tooltip-button" type="button" aria-labelledby="tooltip-label"></button>
+              <span class="tooltip-text" id="tooltip-label" role="tooltip">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+            </span>
+          </div>
+          <div class="modal-group">
+            <input class="modal-input modal-input-guests" id="children" name="children" type="number" value="2" placeholder="0" min="0" max="99" required>
+            <button class="modal-button modal-button-change modal-button-increase" type="button">
+              <svg class="modal-input-image" width="20" height="20" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M3 9v2h14V9H3Z" />
+              </svg>
+              <span class="visually-hidden">Уменьшить количество детей</span>
+            </button>
+            <button class="modal-button modal-button-change modal-button-decrease" type="button">
+              <svg class="modal-input-image" width="20" height="20" viewbox="0 0 20 20" fill="currentColor" aria-hidden="true" focusable="false">
+                <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" />
+              </svg>
+              <span class="visually-hidden">Увеличить количество детей</span>
+            </button>
+          </div>
+          <button class="modal-button-submit" type="submit">Найти</button>
+        </form>
+      </div>
+    </div>
 
   </body>
 
